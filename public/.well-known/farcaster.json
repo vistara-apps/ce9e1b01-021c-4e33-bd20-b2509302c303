@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "PrescribeNow",
+    "subtitle": "Built with Zara",
+    "description": "PrescribeNow is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app",
+    "splashImageUrl": "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app/image.png",
+    "tagline": "PrescribeNow",
+    "screenshotUrls": [
+      "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app/screenshot.png",
+      "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://ce9e1b01021c4e33bd20b2509302c303-vsod.vercel.app/api/webhook"
+  }
+}
