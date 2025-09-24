@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Wellness Theme - Forest Green & Mint */
+  --color-bg: 34 59 34; /* Forest green background */
+  --color-fg: 248 250 252; /* Light text */
+  --color-accent: 152 251 152; /* Mint green accent */
+  --color-accent-hover: 144 238 144; /* Lighter mint on hover */
+  --color-muted: 71 85 105; /* Muted gray */
+  --color-border: 152 251 152; /* Mint border */
+  --border-radius: 1rem; /* Curved borders for natural feel */
+}
+
+[data-theme="celo"] {
+  --color-bg: 0 0 0;
+  --color-fg: 255 255 255;
+  --color-accent: 251 204 92;
+  --color-accent-hover: 245 192 76;
+  --color-muted: 115 115 115;
+  --color-border: 251 204 92;
+  --border-radius: 0.25rem;
+}
+
+[data-theme="solana"] {
+  --color-bg: 25 25 50;
+  --color-fg: 255 255 255;
+  --color-accent: 220 38 127;
+  --color-accent-hover: 200 30 115;
+  --color-muted: 115 115 115;
+  --color-border: 220 38 127;
+  --border-radius: 0.5rem;
+}
+
+[data-theme="base"] {
+  --color-bg: 15 23 42;
+  --color-fg: 248 250 252;
+  --color-accent: 0 82 255;
+  --color-accent-hover: 0 70 230;
+  --color-muted: 71 85 105;
+  --color-border: 0 82 255;
+  --border-radius: 0.75rem;
+}
+
+[data-theme="coinbase"] {
+  --color-bg: 13 17 28;
+  --color-fg: 248 250 252;
+  --color-accent: 0 82 255;
+  --color-accent-hover: 0 70 230;
+  --color-muted: 71 85 105;
+  --color-border: 0 82 255;
+  --border-radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-bg text-fg;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20;
+    border-radius: var(--border-radius);
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-bg px-6 py-3 font-medium hover:bg-accent-hover transition-all duration-200 shadow-lg hover:shadow-xl;
+    border-radius: var(--border-radius);
+  }
+  
+  .btn-secondary {
+    @apply bg-white bg-opacity-10 text-fg px-6 py-3 font-medium hover:bg-opacity-20 transition-all duration-200 border border-white border-opacity-20;
+    border-radius: var(--border-radius);
+  }
+  
+  .input-field {
+    @apply bg-white bg-opacity-10 border border-white border-opacity-20 text-fg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-200;
+    border-radius: var(--border-radius);
+  }
+  
+  .metric-card {
+    @apply glass-card p-6 hover:bg-opacity-15 transition-all duration-200;
+  }
+  
+  .prescription-card {
+    @apply glass-card p-4 hover:bg-opacity-15 transition-all duration-200 cursor-pointer;
+  }
+}
